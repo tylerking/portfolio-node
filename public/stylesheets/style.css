@@ -106,7 +106,7 @@ ul.projects li.project {
 }
 @media screen and (min-width: 420px) {
   ul.projects li.project {
-    width: 50%;
+    width: 49%;
   }
 }
 @media screen and (min-width: 768px) {
