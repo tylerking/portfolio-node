@@ -1,14 +1,23 @@
+white = #ffffff
+black = #000000
+teal = #008080
+red = #dc143c
+blue = #7289da
+nodejs = #689F63
+linkedin = #0077B5
+
 *
   box-sizing border-box
 
 body
   background-color white
-  font-family 'Lato', sans-serif;
+  font-family 'Lato', sans-serif
   font-weight 300
   padding 40px 20px
 
 h1,h2,h3,h4,h5,h6
   font-weight 600
+  line-height 150%
 
 h1
   font-size 28px
@@ -32,8 +41,8 @@ a
   color black
 
 p
-  font-size: 20px;
-  line-height: 1.5;
+  font-size 20px
+  line-height 1.5
 
 strong 
   font-weight 400
@@ -48,24 +57,33 @@ header
   overflow hidden
   h1
     float left
+    i 
+      color teal
+      position relative
+      top -4px
   nav 
     ul
       display flex
       float right 
       justify-content space-between
+      margin-top 8px
       li
         margin-left 10px
+        i 
+          font-size 20px
+        .fa-linkedin-in
+          color linkedin
 
 footer 
   margin-top 40px
   .built
     float right
   .fa-code
-    color #7289da
+    color blue
   .fa-heart
-    color #dc143c
+    color red
   .fa-node-js
-   color #689F63
+   color nodejs
 
 .introduction
   margin-bottom 100px
@@ -79,31 +97,31 @@ ul.projects
   margin-bottom 100px
   li.project
     background-color whitesmoke
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    height: 150px;
-    margin-bottom: 20px;
-    text-align: center;
+    background-position 50%
+    background-repeat no-repeat
+    background-size cover
+    -webkit-background-size cover
+    -moz-background-size cover
+    -o-background-size cover
+    height 150px
+    margin-bottom 20px
+    text-align center
     width 100%
     @media screen and (min-width: 420px)
       width 49%
     @media screen and (min-width: 768px)
       width 32%
     .project-overlay
-      background: rgba(0,0,0,.7);
-      color: #eee;
-      display: none;
-      height: 150px;
-      letter-spacing: 1px;
-      padding-top: 50px;
-      text-decoration: none;
+      background rgba(0,0,0,.7)
+      color #eee
+      display none
+      height 150px
+      letter-spacing 1px
+      padding-top 50px
+      text-decoration none
     &:hover
       .project-overlay
-        display: block;
+        display block
       
     img 
       width 100%

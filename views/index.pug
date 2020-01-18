@@ -27,8 +27,8 @@ block content
   footer
     p.built
       i.fas.fa-code
-      |  with 
+      | &nbsp; with 
       i.fas.fa-heart
-      |  &amp; 
+      |  &amp; &nbsp;
       i.fab.fa-node-js
-    p &copy; Tyler King.
+    p &copy; !{ PrismicDOM.RichText.asText(document.title) }
