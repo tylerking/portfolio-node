@@ -6,7 +6,6 @@ block content
     h1
       i.fas.fa-cat
       |  !{ PrismicDOM.RichText.asText(document.title) }
-
     nav
       ul
         each nav in document.navigation
@@ -24,7 +23,6 @@ block content
         a(class='project-overlay', href=PrismicDOM.Link.url(project.link, ctx.linkResolver))
           != PrismicDOM.RichText.asHtml(project.title, ctx.linkResolver)
           i.fas.fa-link
-        //-!= PrismicDOM.RichText.asHtml(project.description, ctx.linkResolver)
         
   footer
     p.built
@@ -34,6 +32,3 @@ block content
       |  &amp; 
       i.fab.fa-node-js
     p &copy; Tyler King.
-  
-  script.
-    console.log(!{JSON.stringify(document)})
