@@ -1,0 +1,39 @@
+extends layout
+
+block content
+
+  header
+    h1
+      i.fas.fa-cat
+      |  !{ PrismicDOM.RichText.asText(document.title) }
+
+    nav
+      ul
+        each nav in document.navigation
+          li
+            - var navLink = PrismicDOM.Link.url(nav.link, ctx.linkResolver)
+            a(href=navLink)
+              i(class=nav.icon)
+  
+  .introduction
+    != PrismicDOM.RichText.asHtml(document.introduction, ctx.linkResolver)
+
+  ul.projects
+    each project in document.project
+      li(class='project', style='background-image: url(' + project.image.url + ')')
+        a(class='project-overlay', href=PrismicDOM.Link.url(project.link, ctx.linkResolver))
+          != PrismicDOM.RichText.asHtml(project.title, ctx.linkResolver)
+          i.fas.fa-link
+        //-!= PrismicDOM.RichText.asHtml(project.description, ctx.linkResolver)
+        
+  footer
+    p.built
+      i.fas.fa-code
+      |  with 
+      i.fas.fa-heart
+      |  &amp; 
+      i.fab.fa-node-js
+    p &copy; Tyler King.
+  
+  script.
+    console.log(!{JSON.stringify(document)})
