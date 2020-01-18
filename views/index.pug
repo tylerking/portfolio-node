@@ -22,7 +22,7 @@ block content
       li(class='project', style='background-image: url(' + project.image.url + ')')
         a(class='project-overlay', href=PrismicDOM.Link.url(project.link, ctx.linkResolver))
           != PrismicDOM.RichText.asHtml(project.title, ctx.linkResolver)
-          i.fas.fa-link
+          i.fas.fa-external-link-alt
         
   footer
     p.built
