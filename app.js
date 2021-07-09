@@ -10,7 +10,7 @@ const PrismicDOM = require('prismic-dom');
 const PrismicConfig = require('./prismic-configuration');
 
 const app = express();
-const port = 6550;
+const port = 6650;
 
 app.listen(port, () => {
   process.stdout.write(`Point your browser to: http://localhost:${port}\n`);
